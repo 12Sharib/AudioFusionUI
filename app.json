@@ -4,27 +4,29 @@
     "slug": "AudioFusionUI",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+  
+    "android": {
+     
+      "permissions": ["WRITE_EXTERNAL_STORAGE", "READ_EXTERNAL_STORAGE"],
+      "PermissionStatus.GRANTED": "granted"
+      
     },
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ],
+    
+
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
     }
   }
 }
